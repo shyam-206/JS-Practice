@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button_class">
+        change class Text
+    </button>
+    <div class="class">
+        I am the Query selector for class
+    </div>
+    <button class="button_id_Quey">
+        change text of Id1
+    </button>
+    <div id="id_Query">
+        I am the Query Selector 
+    </div>
+    <button class="button_id">
+        change text of Id2
+    </button>
+    <div id="id">
+        I am the Query selector for id 
+    </div>
+
+    <script>
+
+        //Event Listner 
+        var class_var=document.querySelector('.class')
+        var button_class=document.querySelector('.button_class')
+        button_class.addEventListener('click',function(){
+            class_var.textContent="class workds...."
+        })
+
+        var Id_Qury=document.querySelector('#id_Query')
+        var button_id_Qury=document.querySelector('.button_id_Quey')
+        button_id_Qury.addEventListener('click',function(){
+            Id_Qury.textContent="Id-Query..."
+        })
+
+        var id=document.querySelector('#id')
+        var button_id=document.querySelector('.button_id')
+        button_id.addEventListener('click',function(){
+            id.textContent="button-id"
+        })
+
+
+
+
+    </script>
+</body>
+</html>

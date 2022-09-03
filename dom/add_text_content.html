@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="button">
+        Add Hello
+    </button>
+    <div class="text">
+        Hello
+    </div>
+
+    <button class="set_interval">
+        start interval
+    </button>
+    <div class="seconds">
+
+    </div>
+
+    <script>
+        var Btn=document.querySelector('.button')
+        var text=document.querySelector('.text')
+        Btn.addEventListener('click',function(){
+            text.textContent=text.textContent+" Hello"
+        })
+
+        var set_interval_=document.querySelector('.set_interval')
+        var seconds_=document.querySelector('.seconds')
+
+      var s=0;
+      var counter;
+      set_interval_.addEventListener('click',function(){
+          if(!counter){
+            counter=setInterval(myRun,1000)
+          }
+         
+          function myRun(){
+              seconds_.textContent=s+1;
+              s=s+1;
+          }
+      })
+    </script>
+</body>
+</html>
